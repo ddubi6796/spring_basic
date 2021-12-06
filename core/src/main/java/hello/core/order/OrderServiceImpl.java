@@ -14,6 +14,7 @@ public class OrderServiceImpl implements OrderService{
 	private final DiscountPolicy discountPolicy;
 	
 	@Autowired
+	//Spring Bean이고 생성자가 딱 한개만 존재하면 autowired를 생략해도 의존성 주입이 자동으로 진행됨.
 	public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
 		this.memberRepository = memberRepository;
 		this.discountPolicy = discountPolicy;
