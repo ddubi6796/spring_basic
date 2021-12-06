@@ -10,8 +10,8 @@ import hello.core.member.MemberRepository;
 @Component
 public class OrderServiceImpl implements OrderService{
 
-	private final MemberRepository memberRepository;
-	private final DiscountPolicy discountPolicy;
+	private final MemberRepository memberRepository;	//final 키워드를 사용하면 생성자에서 발생할 수 있는 오류를 방지할 수 있음
+	private final DiscountPolicy discountPolicy;		//생성자 멤버 초기화 누락 시 컴파일 에러 발생!
 	
 	@Autowired
 	//Spring Bean이고 생성자가 딱 한개만 존재하면 autowired를 생략해도 의존성 주입이 자동으로 진행됨.
